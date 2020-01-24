@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>MultiColorSTL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <style>
+        body {
+            background-color: #fff;
+            color: #444;
+        }
+
+        a {
+            color: #08f;
+        }
+    </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.2/nouislider.min.css"  />
+</head>
+<body>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>-->
+<!--<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.js" integrity="sha256-jmSsX8km4AmoOLA5zpP5GEzk+YmxRj/xDAYlewpQ9qY=" crossorigin="anonymous"></script>-->
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.js"></script>-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.2/nouislider.min.js" ></script>
+
+
+
+<script src="js/jszip.js"></script>
+<script src="js/three.js"></script>
+<script src="https://threejs.org/examples/js/loaders/STLLoader.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<script src="https://threejs.org/examples/js/loaders/3MFLoader.js"></script>
+
+
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+
+<!--<script src="js/OrbitControls.js"  type="module"></script>-->
+<!--<script src="js/three.module.js"></script>-->
+<!--<script src="https://threejs.org/build/three.module.js" type="text/babel"></script>-->
+
+
+
+
+<div style="display: flex">
+
+        <div id="container">
+
+        </div>
+    <!--Pouze orientační náhled. Barvy přechází okamžitě.-->
+
+        <div id="range" style="height: 500px;margin: 0 50px"></div>
+
+        <div id="reactapp" style="padding: 0 20px;"></div>
+
+</div>
+
+
+<script>
+    var barvy = [
+        '#FFFFFF',
+//        '#000000',
+//        '#FF0000',
+        '#FF00FF',
+//        '#00FFFF',
+//        '#0000FF',
+//        '#FFFF00',
+        '#9e9779',
+        '#3DA53F',
+        '#DD2C00',
+        '#AA8D60',
+        '#161710',
+        '#6A9F97'
+    ];
+
+
+    var typs = {
+        'half': [
+            [70, '#FFFFFF'],
+            [140, '#000000]'
+            ]
+        ],
+        'strips': [
+            [20, '#FFFFFF'],
+            [40, '#FF00FF'],
+            [60, '#00FFFF'],
+            [80, '#0000FF'],
+            [90, '#FFFF00'],
+            [130, '#FF00FF'],
+            [300, '#A0A0FF'],
+        ],
+
+        'trips':[
+            [20, '#FFFFFF'],
+            [40, '#FF00FF'],
+            [60, '#00FFFF'],
+            [80, '#0000FF'],
+            [90, '#FFFF00'],
+        ],
+        'full': [
+            [180, '#ABCDEF']
+        ]
+    }
+
+
+</script>
+
+
+
+<!-- Load React. -->
+<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="js/stl.js" ></script>
+<script src="js/app.js" type="text/babel"></script>
+
+</body>
+
+</html>
